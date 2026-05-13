@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering
+\caption{Training Hyperparameters and Experimental Settings}
+\label{tab:hyperparameters}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.25\textwidth} X}
+\toprule
+\textbf{Setting} & \textbf{Value} \\
+\midrule
+Framework & PyTorch with torchvision \\
+Hardware/device & Google Colab T4 GPU \\
+Epochs & 25 by default \\
+Batch size & 128 \\
+Optimizer & Adam \\
+Learning rate & 0.001 \\
+Loss function & CrossEntropyLoss \\
+Train/validation split & 90\% training and 10\% validation \\
+MNIST preprocessing & Images were padded from $28 \times 28$ to $32 \times 32$ using \texttt{Pad(2)}, converted to tensors using \texttt{ToTensor()}, and normalized with mean $(0.1307,)$ and standard deviation $(0.3081,)$. \\
+CIFAR-10 preprocessing & Images were converted to tensors using \texttt{ToTensor()} and normalized with mean $(0.4914, 0.4822, 0.4465)$ and standard deviation $(0.2470, 0.2435, 0.2616)$. \\
+Data augmentation & MNIST used no data augmentation. CIFAR-10 training used \texttt{RandomCrop(32, padding=4)} and \texttt{RandomHorizontalFlip()}. \\
+Random seed & 42 by default. The code seeds Python, NumPy, PyTorch, and CUDA, with cuDNN deterministic mode enabled and benchmark mode disabled. \\
+Metrics computed & Train loss, train accuracy, validation loss, validation accuracy, test accuracy, macro precision, macro recall, macro F1, weighted precision, weighted recall, weighted F1, per-class metrics, confusion matrix, loss curve, and accuracy curve. \\
+TensorBoard scalars & \texttt{loss/train}, \texttt{loss/val}, \texttt{acc/train}, and \texttt{acc/val}. \\
+\bottomrule
+\end{tabularx}
+\end{table*}

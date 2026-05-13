@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Final Model Comparison on MNIST and CIFAR-10}
+\label{tab:final_model_comparison}
+\begin{tabular}{llcccccc}
+\hline
+Model & Dataset & Test Acc. & Macro Prec. & Macro Rec. & Macro F1 & Weighted F1 & Best Val Acc. \\
+\hline
+LeNet & MNIST & 0.9893 & 0.9892 & 0.9891 & 0.9891 & 0.9893 & 0.9905 \\
+LeNet & CIFAR-10 & 0.6566 & 0.6556 & 0.6566 & 0.6536 & 0.6536 & 0.6630 \\
+ResNet-18 & MNIST & 0.9924 & 0.9924 & 0.9924 & 0.9924 & 0.9924 & 0.9935 \\
+ResNet-18 & CIFAR-10 & 0.9024 & 0.9036 & 0.9024 & 0.9024 & 0.9024 & 0.9104 \\
+SE-ResNet-18 & MNIST & 0.9935 & 0.9935 & 0.9935 & 0.9935 & 0.9935 & 0.9948 \\
+SE-ResNet-18 & CIFAR-10 & 0.9057 & 0.9073 & 0.9057 & 0.9058 & 0.9058 & 0.9036 \\
+\hline
+\end{tabular}
+\end{table*}
